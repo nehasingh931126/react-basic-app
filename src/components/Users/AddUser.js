@@ -13,7 +13,8 @@ const AddUser = (prop) => {
         if (+enterAge < 1) {
             return;
         }
-        console.log(enterUsername, enterAge);
+
+        prop.onAddUser({name: enterUsername, age: enterAge, id: Math.random().toString()});
         setEnteredUsername('');
         setEnteredAge('');
     }
